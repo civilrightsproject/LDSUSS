@@ -1,0 +1,40 @@
+# Notes and Provisional Plan
+
+Longitudinal Dataset of US Schools
+
+TWO PRODUCTS:
+1.	District-level, by race, by year
+2.	School-level, by race, by year
+
+Fundamental difficult parts: Schools close and open over time. Even if same building, the institution (and unique IDs) will often not be similar over time. Districts expand, contract, and dissolve.
+
+## DOCUMENTATION:
+The SUPPLMENTARY docs on the website sometimes have good info. For example, the 1976 page has three supplemental files, one of which has “looseleaf” scans that include state and national summaries of minority composition (e.g., p. 105
+
+## SAMPLING:	
+Just use complete matches thru time in V1. Use the simple leaid = DISTCODE way of finding matches. Worry about the mismatches LATER.
+Complete sample in 1976 and 2000 
+
+Basic unit is the district. And then each school within a chosen district is measured.
+The 1973 survey concentrated on districts with “some form of litigation or compliance activity” (User Guides, Appendix to Summary Report on prior years’ surveys as a tool towards improving future surveys, Opportunity Systems, INC. 1330 Mass. Ave). The same guide mentions that the surveys “have been designed to support OCR in the compliance monitoring responsibility rather than providing a continuous survey coverage of the school districts in the United States.” So no random or complete coverage is guaranteed (besides the complete samples in 1976 and 2000?). However, “School districts are chosen on a variety of bases, sometimes random, sometimes based on compliance involvement, etc.”
+
+The sampling method for 1968, 70, and 72 is described in detail on p. 9 of the PDF from the 1973 User Guide. And one helpful, relevant piece is that all districts > 3000 students were included. So we could make longitudinal claims that are based on census data of all but the smallest districts (at least before 1974). Moreover, the probability of inclusion for smaller districts was set, so we could make universe estimates.
+
+The 1978 survey “includes almost all school districts enrolling large numbers of pupils and almost all school districts enrolling high proportions of minority pupils” (Analysis of Selected Civil Rights Issues, March 1980, Volume I, National Rankings, Killalea Associates, found in the supplemental materials of the 1978 archive, p. 2). Yet, another report doesn’t comport: “The survey collected data from a sample of 6,049 public elementary and secondary school districts that enroll 300 or more pupils…. This sample represents about one half of the districts in that size category. In those districts, however, some 54,000 schools were surveyed, about two thirds of all schools in districts that enroll 300 or more pupils” (Director of Elementary and Secondary School Districts, and Schools in Selected School Districts: School Year 1978-1979, Vol I, found in the 1980 supplemental archive, p. vii)
+In non-1976 and 2000 years, there was a sample of districts (and all schools within each district), but I think a “rolling” sample across 2-3 sampled years might include all schools. (e.g., The 1968 overview page here includes, “Data were collected via a sample of school districts and all individual schools within these districts. The data was collected over two consecutive years to include 1969.” And the 1970 overview pages says the data were collected between 1970 and 1971. And here’s what the 1978 overview page says: “This collection was part of a “rolling” sample that included the 1980 and 1982 collections, which can be used together for aggregate research.” In addition, the 1978 page includes, “The data was collected over two consecutive years to include 1979.” So, it seems that there are two things happening: 1) A given sample year may include data collection of a given sample across 2 years. 2) There are some multi-wave sampling that cross 3-5 years that does something special (e.g., “the design for the 1978 survey is part of a plan by which each district will have been surveyed at least once in the sequence of 1978, 1980, and 1982 surveys”; Director of Elementary and Secondary School Districts, and Schools in Selected School Districts: School Year 1978-1979, Vol I, found in the 1980 supplemental archive, p. vii-viii). The same source suggests that the sample weight allows estimation of state, region and national levels. Does 1978, 1980, and 1982 constitute a complete sample? I think so! The simplest thing to do would be to start the combining from 1976, and then see what other combinations of years, if any, include a complete sample.
+
+
+# FOCUS:
+Just need a single overlap at the moment: 1990?
+few overlaps between 1988 and 1998 – let’s do 1988, 1990, 1992, 1994, and 1997 
+(1998 has something different making it inconsistent at the moment)
+
+Also, just do 1976 to start – that should be a complete sample year.
+Do the archival at the DISTRICT LEVEL, because that is already in tidy format.
+Need to see about matching district ID’s across the years, test 1968 to 1988
+-	Looks okay
+
+DISTRICT-LEVEL won’t be able to give us traditional within district exposure stats, need school-level for that.
+
+## Race data:
+Should probably use RMEM (instead of MEM), because MEM isn’t reported in later years (> 1994). And RMEM and MEM were identical in 1968 (for Black and white)
